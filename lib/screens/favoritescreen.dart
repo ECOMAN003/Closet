@@ -33,23 +33,33 @@ class FavoriteScreenBody extends StatefulWidget {
 
 Padding favoriteBody(BuildContext context) {
   return Padding(
-    padding: const EdgeInsets.all(10.0),
-    child: Container(
-      width: MediaQuery.of(context).size.width,
-      height: MediaQuery.of(context).size.width - 70,
-      decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(30),
-          boxShadow: [
-            BoxShadow(
-              color: Colors.black.withOpacity(0.3),
-              spreadRadius: 2,
-              blurRadius: 20,
-              offset: Offset(0, 10),
-            ),
-          ],
-          image: DecorationImage(
-            image: AssetImage('assets/images/heman.jpg'),
-          )),
+    padding: const EdgeInsets.all(20.0),
+    child: Stack(
+      children: [Container(
+        width: MediaQuery.of(context).size.width,
+        height: MediaQuery.of(context).size.width - 70,
+        decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(30),
+            boxShadow: [
+              BoxShadow(
+                color: mainColor.withOpacity(0.3),
+                spreadRadius: 2,
+                blurRadius: 20,
+                offset: Offset(0, 10),
+              ),
+            ],
+            image: DecorationImage(
+              fit: BoxFit.cover,
+              image: AssetImage('assets/images/heman.jpg'),
+            )),
+      ),
+      Positioned(
+          bottom: 20,
+          right: 20,
+          child: Icon(Icons.favorite,
+              size: 35, color: Colors.white.withOpacity(0.7)),
+        )
+      ]
     ),
   );
 }
