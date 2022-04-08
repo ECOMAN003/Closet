@@ -35,27 +35,21 @@ Padding favoriteBody(BuildContext context) {
   return Padding(
     padding: const EdgeInsets.all(10.0),
     child: Container(
-      height: MediaQuery.of(context).size.height * 0.3,
       width: MediaQuery.of(context).size.width,
+      height: MediaQuery.of(context).size.width - 70,
       decoration: BoxDecoration(
-          color: mainColor, borderRadius: BorderRadius.circular(10.0)),
-          child: Column(children: [
-            Expanded(
-              flex: 3,
-              child: Image.asset('assets/images/heman.jpg',
-              fit: BoxFit.fill,
-              ),
+          borderRadius: BorderRadius.circular(30),
+          boxShadow: [
+            BoxShadow(
+              color: Colors.black.withOpacity(0.3),
+              spreadRadius: 2,
+              blurRadius: 20,
+              offset: Offset(0, 10),
             ),
-            Expanded(
-              flex: 1,
-              child: Container(
-                decoration: BoxDecoration(
-                  color: textBoldColor,
-                  borderRadius: BorderRadius.only(bottomLeft: Radius.circular(10.0), bottomRight: Radius.circular(10.0))
-                ),
-              ),
-            )
-          ]),
+          ],
+          image: DecorationImage(
+            image: AssetImage('assets/images/heman.jpg'),
+          )),
     ),
   );
 }

@@ -57,7 +57,7 @@ class _ProfileScreenBodyState extends State<ProfileScreenBody> {
           Center(
             child: CircleAvatar(
               radius: 50.0,
-              backgroundImage: AssetImage('assets/images/sylvia.jpg'),
+              backgroundImage: AssetImage('assets/images/heman.jpg'),
             ),
           ),
           profileBody(topPadding: 20.0, displayText: 'USERNAME:', displayColor: textColor, displaySize: 15.0),
