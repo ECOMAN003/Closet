@@ -62,7 +62,7 @@ class _MyHomePageState extends State<MyHomePage> {
         animationDuration: const Duration(milliseconds: 300),
         buttonBackgroundColor: mainColor,
         color: mainColor,
-        backgroundColor: Colors.transparent,
+        backgroundColor: Colors.transparent,   
         items: items,
         height: 60.0,
         index: index,
