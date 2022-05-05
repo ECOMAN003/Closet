@@ -15,7 +15,7 @@ class _SearchScreenState extends State<SearchScreen> {
     return Scaffold(
       extendBody: true,
       backgroundColor: accentColor,
-      appBar: displayAppBar(appBarText: 'Search', appBarIcon: Icons.search_sharp),
+      appBar: displayAppBar(appBarText: 'Search', ),
     );
   }
 }

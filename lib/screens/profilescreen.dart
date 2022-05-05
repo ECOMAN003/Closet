@@ -16,35 +16,49 @@ class _ProfileScreenState extends State<ProfileScreen> {
     return Scaffold(
       extendBody: true,
       backgroundColor: accentColor,
-      appBar: displayAppBar(appBarText: 'Profile', appBarIcon: Icons.person_outlined),
+      appBar: displayAppBar(
+        appBarText: 'Profile',
+        navIcon: IconButton(
+          onPressed: () {
+           
+          },
+          icon: Icon(
+            Icons.settings_suggest_outlined,
+            color: accentColor,
+          ),
+        ),
+      ),
       body: ProfileScreenBody(),
     );
   }
 }
 
 class ProfileScreenBody extends StatefulWidget {
-
   const ProfileScreenBody({Key? key}) : super(key: key);
 
   @override
   State<ProfileScreenBody> createState() => _ProfileScreenBodyState();
 }
 
-Padding profileBody(
-    {required double topPadding, 
-    required String? displayText, 
-    required Color displayColor,
-    required double displaySize,
-     String? displayFont,
-    }) {
-    return Padding(
-      padding:  EdgeInsets.only(top: topPadding),
-      child: Text(
-        '$displayText',
-        style: TextStyle(color: displayColor, fontWeight: FontWeight.bold, fontSize: displaySize, fontFamily: displayFont),
-      ),
-    );
-  }
+Padding profileBody({
+  required double topPadding,
+  required String? displayText,
+  required Color displayColor,
+  required double displaySize,
+  String? displayFont,
+}) {
+  return Padding(
+    padding: EdgeInsets.only(top: topPadding),
+    child: Text(
+      '$displayText',
+      style: TextStyle(
+          color: displayColor,
+          fontWeight: FontWeight.bold,
+          fontSize: displaySize,
+          fontFamily: displayFont),
+    ),
+  );
+}
 
 class _ProfileScreenBodyState extends State<ProfileScreenBody> {
   @override
@@ -60,10 +74,32 @@ class _ProfileScreenBodyState extends State<ProfileScreenBody> {
               backgroundImage: AssetImage('assets/images/heman.jpg'),
             ),
           ),
-          profileBody(topPadding: 20.0, displayText: 'USERNAME:', displayColor: textColor, displaySize: 15.0),
-          profileBody(topPadding: 1.0, displayText: 'PEDIAPL_RIATORIS', displayColor: textBoldColor, displaySize: 20.0, displayFont: 'Pacifico'),
-          profileBody(topPadding: 20.0, displayText: 'LANGUAGE:', displayColor: textColor, displaySize: 15.0),
-          profileBody(topPadding: 1.0, displayText: 'English', displayColor: textBoldColor, displaySize: 20.0, displayFont: 'Pacifico'),
+          profileBody(
+              topPadding: 20.0,
+              displayText: 'USERNAME:',
+              displayColor: textColor,
+              displaySize: 15.0),
+          profileBody(
+              topPadding: 1.0,
+              displayText: 'PEDIAPL_RIATORIS',
+              displayColor: textBoldColor,
+              displaySize: 20.0,
+              displayFont: 'Pacifico'),
+          profileBody(
+              topPadding: 20.0,
+              displayText: 'LANGUAGE:',
+              displayColor: textColor,
+              displaySize: 15.0),
+          profileBody(
+              topPadding: 1.0,
+              displayText: 'English',
+              displayColor: textBoldColor,
+              displaySize: 20.0,
+              displayFont: 'Pacifico'),
+          profileBody(topPadding: 1.0,
+              displayText: 'Bio', 
+              displayColor: textBoldColor, 
+              displaySize: 15.0),
         ],
       ),
     );

@@ -3,7 +3,7 @@ import 'package:closet/utils/colors.dart';
 
 AppBar displayAppBar({
   required String? appBarText,
-  required IconData appBarIcon,
+  IconButton? navIcon,
 }) {
   return AppBar(
     backgroundColor: mainColor,
@@ -20,10 +20,7 @@ AppBar displayAppBar({
       Padding(
         // ignore: prefer_const_constructors
         padding: EdgeInsets.only(right: 10.0),
-        child: Icon(
-          appBarIcon,
-          color: accentColor,
-        ),
+        child: navIcon,
       ),
     ],
   );

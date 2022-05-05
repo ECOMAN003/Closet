@@ -18,7 +18,7 @@ class _FavoriteScreenState extends State<FavoriteScreen> {
       extendBody: true,
       backgroundColor: accentColor,
       appBar: displayAppBar(
-          appBarText: 'Favorites', appBarIcon: Icons.favorite_outline),
+          appBarText: 'Favorites'),
       body: FavoriteScreenBody(),
     );
   }

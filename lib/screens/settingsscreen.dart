@@ -15,7 +15,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
     return Scaffold(
       extendBody: true,
       backgroundColor: accentColor,
-      appBar: displayAppBar(appBarText: 'Settings', appBarIcon: Icons.settings_outlined)
+      appBar: displayAppBar(appBarText: 'Settings')
     );
   }
 }
