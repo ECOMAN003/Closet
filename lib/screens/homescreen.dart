@@ -13,8 +13,8 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-
   int _currentIndex = 0;
+  int gitVar = 0;
 
   @override
   Widget build(BuildContext context) {
@@ -27,14 +27,14 @@ class _MyHomePageState extends State<MyHomePage> {
     ];
 
     // ignore: prefer_const_declarations
-    
+
     return Scaffold(
       backgroundColor: accentColor,
       bottomNavigationBar: NavigationBarTheme(
         data: const NavigationBarThemeData(
           backgroundColor: navBarColor,
           indicatorColor: mainColor,
-          ),
+        ),
         child: NavigationBar(
           animationDuration: const Duration(milliseconds: 600),
           labelBehavior: NavigationDestinationLabelBehavior.onlyShowSelected,
@@ -45,28 +45,40 @@ class _MyHomePageState extends State<MyHomePage> {
               _currentIndex = newIndex;
             });
           },
-        destinations: const [
-          NavigationDestination(
-            selectedIcon: Icon(Icons.home, color: accentColor,),
-            icon: Icon(Icons.home_outlined), 
-            label: 'home',
+          destinations: const [
+            NavigationDestination(
+              selectedIcon: Icon(
+                Icons.home,
+                color: accentColor,
+              ),
+              icon: Icon(Icons.home_outlined),
+              label: 'home',
             ),
-          NavigationDestination(
-            selectedIcon: Icon(Icons.search, color: accentColor,),
-            icon: Icon(Icons.search_sharp), 
-            label: 'search',
+            NavigationDestination(
+              selectedIcon: Icon(
+                Icons.search,
+                color: accentColor,
+              ),
+              icon: Icon(Icons.search_sharp),
+              label: 'search',
             ),
-          NavigationDestination(
-            selectedIcon: Icon(Icons.favorite, color: accentColor,),
-            icon: Icon(Icons.favorite_border_outlined), 
-            label: 'favorites',
+            NavigationDestination(
+              selectedIcon: Icon(
+                Icons.favorite,
+                color: accentColor,
+              ),
+              icon: Icon(Icons.favorite_border_outlined),
+              label: 'favorites',
             ),
-          NavigationDestination(
-            selectedIcon: Icon(Icons.person, color: accentColor,),
-            icon: Icon(Icons.person_outlined), 
-            label: 'profile',
+            NavigationDestination(
+              selectedIcon: Icon(
+                Icons.person,
+                color: accentColor,
+              ),
+              icon: Icon(Icons.person_outlined),
+              label: 'profile',
             ),
-        ],
+          ],
         ),
       ),
       body: screens[_currentIndex],
