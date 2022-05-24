@@ -105,7 +105,7 @@ class _HomeScreenState extends State<HomeScreen> {
 }
 
 const navTextStyle = TextStyle(
-  fontSize: 40.0,
+  fontSize: 4.0,
   fontWeight: FontWeight.bold,
   letterSpacing: 2,
   fontStyle: FontStyle.italic,
